@@ -7,7 +7,7 @@ namespace YummyProject.Models
 {
     public class Category
     {
-        public int CatetgoryId { get; set; }
+        public int CategoryId { get; set; }
         public string CategoryName { get; set; }
 
         public virtual List<Product> Products { get; set; }
