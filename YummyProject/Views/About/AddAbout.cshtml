@@ -1,0 +1,48 @@
+﻿@model YummyProject.Models.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Hakkımda Ekleme Sayfası</h2>
+
+<form method="post">
+
+    <label>Resim Url</label>
+    @Html.TextAreaFor(x => x.ImageUrl, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.ImageUrl)</div>
+    <br />
+    <label>Madde 1</label>
+    @Html.TextAreaFor(x => x.Item1, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Item1)</div>
+    <br />
+    <label>Madde 2</label>
+    @Html.TextAreaFor(x => x.Item2, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Item2)</div>
+    <br />
+    <label>Madde 3</label>
+    @Html.TextAreaFor(x => x.Item3, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Item3)</div>
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 1, 4, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Description)</div>
+    <br />
+    <label>VideoUrl</label>
+    @Html.TextAreaFor(x => x.VideoUrl, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.VideoUrl)</div>
+    <br />
+    <label>Telefon Numarası</label>
+    @Html.TextAreaFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.PhoneNumber)</div>
+    <br />
+    <label>Video Resmi</label>
+    @Html.TextAreaFor(x => x.ImageUrl2, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.ImageUrl2)</div>
+    <br />
+
+    <div class="text-danger">@ViewBag.error</div>
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

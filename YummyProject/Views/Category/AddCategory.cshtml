@@ -1,0 +1,19 @@
+﻿@model YummyProject.Models.Category
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>YeniKategori Ekleme Sayfası</h2>
+
+<form method="post">
+
+    <label>Kategori İsmi</label>
+    @Html.TextAreaFor(x => x.CategoryName, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.CategoryName)</div>
+    <br />
+    <div class="text-danger">@ViewBag.error</div>
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

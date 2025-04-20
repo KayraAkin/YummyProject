@@ -6,8 +6,8 @@
     }
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <h2>Our Menu</h2>
-        <p><span>Check Our</span> <span class="description-title">Yummy Menu</span></p>
+        <h2>Menümüz</h2>
+        <p><span>Menümüze</span> <span class="description-title">Gözatın</span></p>
     </div><!-- End Section Title -->
 
     <div class="container">
@@ -18,7 +18,7 @@
                         count++;
 
             <li class="nav-item">
-                <a class="nav-link @(count ==1 ? "active show" : "")" data-bs-toggle="tab" data-bs-target="#menu-@category.CategoryName">
+                <a class="nav-link @(count ==1 ? "active show" : "")" data-bs-toggle="tab" data-bs-target="#menu-@category.CategoryId">
                     <h4>@category.CategoryName</h4>
                 </a>
             </li><!-- End tab nav item -->
@@ -34,7 +34,7 @@
 
                 count2++;
 
-            <div class="tab-pane fade @(count2 ==1 ? "active show" : "")" id="@category.CategoryName">
+            <div class="tab-pane fade @(count2 ==1 ? "active show" : "")" id="menu-@category.CategoryId">
 
                 <div class="tab-header text-center">
                     <p>Menü</p>
@@ -62,7 +62,7 @@
 
                 </div>
             </div><!-- End Starter Menu Content -->
-            }
+           } 
 
 
         </div>
