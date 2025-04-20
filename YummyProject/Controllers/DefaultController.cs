@@ -33,6 +33,41 @@ namespace YummyProject.Controllers
             var values = context.Categories.ToList();
             return PartialView(values);
         }
+        public PartialViewResult DefaultService()
+        {
+            var values = context.Services.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultTestimonial()
+        {
+            var values = context.Testimonials.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultEvent()
+        {
+            var values = context.Events.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultChef()
+        {
+            var values = context.Chefs.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultBooking()
+        {
+            var values = context.Bookings.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultPhotoGallery()
+        {
+            var values = context.PhotoGalleries.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultContactInfo()
+        {
+            var values = context.ContactInfos.ToList();
+            return PartialView(values);
+        }
 
     }
 }
