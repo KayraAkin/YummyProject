@@ -1,0 +1,43 @@
+﻿@model List<YummyProject.Models.ContactInfo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<h2>Öne Çıkan Alan</h2>
+
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>#</th>
+        <th>Adres</th>
+        <th>Email</th>
+        <th>Telefon Numarası</th>
+        <th>Harita Url</th>
+        <th>Açılış Saati</th>
+
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ContactInfoId</th>
+            <td>@item.Address</td>
+            <td>@item.Email</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.MapUrl</td>
+            <td>@item.OpenHours</td>
+            <td><a href="/ContactInfo/DeleteContactInfo/@item.ContactInfoId" class="btn btn-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-info">Güncelle</a></td>
+
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/ContactInfo/AddContactInfo" class="btn-primary">Yeni Öne Çıkan Alan Ekle</a>

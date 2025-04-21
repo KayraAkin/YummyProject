@@ -65,7 +65,7 @@ namespace YummyProject.Controllers
         }
         public PartialViewResult DefaultContactInfo()
         {
-            var values = context.ContactInfos.ToList();
+            var values = context.ContactInfos.FirstOrDefault();
             return PartialView(values);
         }
 

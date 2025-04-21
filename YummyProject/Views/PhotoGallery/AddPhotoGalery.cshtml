@@ -1,0 +1,19 @@
+﻿@model YummyProject.Models.PhotoGallery
+@{
+    ViewBag.Title = "AddPhotoGalery";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Fotoğraf Ekleme Sayfası</h2>
+
+<form method="post">
+
+    <label>Resim Url</label>
+    @Html.TextAreaFor(x => x.ImageUrl, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.ImageUrl)</div>
+    <br />
+    <div class="text-danger">@ViewBag.error</div>
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

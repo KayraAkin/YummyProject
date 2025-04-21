@@ -1,20 +1,19 @@
-﻿@model List<YummyProject.Models.Product>
+﻿@model List<YummyProject.Models.Chef>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h2>Ürün Alanı</h2>
+<h2>Şef Alanı</h2>
 
 <table class="table table-bordered table-hover">
 
     <tr>
         <th>#</th>
         <th>Resim</th>
-        <th>Ürün Adı</th>
-        <th>İçerik</th>
-        <th>Fiyat</th>
-        <th>Kategorisi</th>
+        <th>İsim</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
 
         <th>Sil</th>
         <th>Güncelle</th>
@@ -23,13 +22,12 @@
     @foreach (var item in Model)
     {
         <tr>
-            <th>@item.ProductId</th>
+            <th>@item.ChefId</th>
             <td><img src="@Url.Content(item.ImageUrl)" style="width:50px;height:50px" /> </td>
             <td>@item.Name</td>
-            <td>@item.Ingredients</td>
-            <td>@item.Price</td>
-            <td>@item.Category.CategoryName</td>
-            <td><a href="/Product/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a href="/Chef/DeleteChef/@item.ChefId" class="btn btn-danger">Sil</a></td>
             <td><a href="#" class="btn btn-info">Güncelle</a></td>
 
         </tr>
@@ -37,4 +35,4 @@
 
 </table>
 <br />
-<a href="/Product/AddProduct" class="btn-primary">Yeni Ürün Ekle</a>
+<a href="/Chef/AddChef" class="btn-primary">Yeni Şef Ekle</a>

@@ -1,0 +1,38 @@
+﻿@model YummyProject.Models.ContactInfo
+@{
+    ViewBag.Title = "AddContactInfo";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<h2>Yeni İletişim Alanı Ekleme Sayfası</h2>
+
+<form method="post">
+
+    <label>Adres</label>
+    @Html.TextAreaFor(x => x.Address, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Address)</div>
+    <br />
+    <label>Email</label>
+    @Html.TextAreaFor(x => x.Email, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Email)</div>
+    <br />
+    <label>Telefon Numarası</label>
+    @Html.TextAreaFor(x => x.PhoneNumber, 1, 4, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.PhoneNumber)</div>
+    <br />
+    <label>Harita Url</label>
+    @Html.TextAreaFor(x => x.MapUrl, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.MapUrl)</div>
+    <br />
+    <label>Açılış Saati</label>
+    @Html.TextAreaFor(x => x.OpenHours, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.OpenHours)</div>
+    <br />
+    <div class="text-danger">@ViewBag.error</div>
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

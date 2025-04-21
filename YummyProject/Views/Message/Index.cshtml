@@ -1,0 +1,45 @@
+﻿@model List<YummyProject.Models.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Mesaj Alanı</h2>
+
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>#</th>
+        <th>İsim</th>
+        <th>Email</th>
+        <th>Konu</th>
+        <th>Mesaj İçeriği</th>
+        <th>Mesaj Durumu</th>
+
+        <th>Sil</th>
+        <th>Mesajı Aç</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.MessageId</th>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@item.MessageContent</td>
+
+            
+            <td>
+                <a href="@Url.Action("ChangeIsRead", "Message", new { id = item.MessageId })" class="btn btn-sm @(item.IsRead ? "btn-secondary" : "btn-success")">
+                    @(item.IsRead ? "Okundu" : "Okunmadı")
+                </a>
+            </td>
+            <td><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Message/OpenMessage/@item.MessageId" class="btn btn-info">Mesajı Aç</a></td>
+
+        </tr>
+    }
+
+</table>
+<br />
