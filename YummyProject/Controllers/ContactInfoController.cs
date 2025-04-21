@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 using YummyProject.Context;
@@ -46,5 +47,20 @@ namespace YummyProject.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult SendMessage(Message message)
+        {
+            if (ModelState.IsValid)
+            {
+                message.IsRead = false;
+                _context.Messages.Add(message);
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }
