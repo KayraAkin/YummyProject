@@ -38,6 +38,14 @@ namespace YummyProject.Controllers
             return View(value);
             
         }
+        public ActionResult DeleteMessage(int id)
+        {
+            var value = _context.Messages.Find(id);
+            _context.Messages.Remove(value);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
 
         [HttpPost]
         [AllowAnonymous]
