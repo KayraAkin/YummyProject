@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Services.Description;
 using YummyProject.Context;
+using YummyProject.Models;
 
 namespace YummyProject.Controllers
 {
@@ -36,6 +37,21 @@ namespace YummyProject.Controllers
             var value = _context.Messages.Find(id);
             return View(value);
             
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult SendMessage(YummyProject.Models.Message message)
+        {
+            if (ModelState.IsValid)
+            {
+                message.IsRead = false;
+                _context.Messages.Add(message);
+                _context.SaveChanges();
+
+                return Content("OK");
+            }
+            return new HttpStatusCodeResult(400, "Geçersiz veri.");
         }
     }
 }

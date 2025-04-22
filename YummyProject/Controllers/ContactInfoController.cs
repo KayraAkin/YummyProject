@@ -48,19 +48,19 @@ namespace YummyProject.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public ActionResult SendMessage(Message message)
-        {
-            if (ModelState.IsValid)
-            {
-                message.IsRead = false;
-                _context.Messages.Add(message);
-                _context.SaveChanges();
+        //[HttpPost]
+        //public ActionResult SendMessage(Message message)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        message.IsRead = false;
+        //        _context.Messages.Add(message);
+        //        _context.SaveChanges();
 
-                return RedirectToAction("Index");
-            }
-            return RedirectToAction("Index");
-        }
+        //        return Json(new { success = true, message = "Mesaj gönderildi." });
+        //    }
+        //    return new HttpStatusCodeResult(400, "Geçersiz veri.");
+        //}
 
     }
 }
