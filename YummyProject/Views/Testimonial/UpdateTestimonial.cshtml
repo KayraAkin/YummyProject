@@ -1,0 +1,38 @@
+﻿﻿@model YummyProject.Models.Testimonial
+
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.TestimonialId)
+    <label>Resim Url</label>
+    @Html.TextAreaFor(x => x.ImageUrl, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.ImageUrl)</div>
+    <br />
+    <label>İsim Soyisim</label>
+    @Html.TextAreaFor(x => x.NameSurname, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.NameSurname)</div>
+    <br />
+    <label>Başlık</label>
+    @Html.TextAreaFor(x => x.Title, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Title)</div>
+    <br />
+    <label>Yorum</label>
+    @Html.TextAreaFor(x => x.Comment, 1, 4, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Comment)</div>
+    <br />
+    <label>Derece</label>
+    @Html.TextAreaFor(x => x.Rating, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Rating)</div>
+    <br />
+
+    <div class="text-danger">@ViewBag.error</div>
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

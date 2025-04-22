@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -43,6 +44,18 @@ namespace YummyProject.Controllers
             _context.Testimonials.Remove(value);
             _context.SaveChanges();
             return RedirectToAction("Index"); ;
+        }
+        public ActionResult UpdateTestimonial(int id)
+        {
+            var value = _context.Testimonials.Find(id);
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateTestimonial(Testimonial testimonial)
+        {
+            _context.Entry(testimonial).State = EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
