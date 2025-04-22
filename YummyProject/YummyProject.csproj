@@ -533,6 +533,7 @@
     <Content Include="Views\Default\DefaultContactInfo.cshtml" />
     <Content Include="Views\ContactInfo\Index.cshtml" />
     <Content Include="Views\ContactInfo\AddContactInfo.cshtml" />
+    <Content Include="Views\Chef\UpdateChef.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
