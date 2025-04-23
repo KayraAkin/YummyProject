@@ -36,3 +36,39 @@
 </table>
 <br />
 <a href="/Chef/AddChef" class="btn-primary">Yeni Şef Ekle</a>
+
+@*<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>#</th>
+        <th>Resim</th>
+        <th>İsim</th>
+        <th>Sosyal Medya İsmi</th>
+        <th>Sosyal Medya Url'i</th>
+        <th>Sosyal Medya İcon'u</th>
+
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        foreach (var itemSocial in item.ChefSocials)
+        {
+            <tr>
+                <th>@item.ChefId</th>
+                <td><img src="@Url.Content(item.ImageUrl)" style="width:50px;height:50px" /> </td>
+                <td>@item.Name</td>
+                <td>@itemSocial.SocialMadiaName</td>
+                <td>@itemSocial.Url</td>
+                <td>@itemSocial.Icon</td>
+                <td><a href="/Chef/DeleteChefSocial/@itemSocial.ChefSocialId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Chef/UpdateChefSocial/@itemSocial.ChefSocialId" class="btn btn-info">Güncelle</a></td>
+
+            </tr>
+        }
+
+    }
+
+</table>
+<a href="/Chef/AddChefSocial" class="btn-primary">Yeni Sosyal Medya Ekle</a>*@

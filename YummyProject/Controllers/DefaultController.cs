@@ -13,6 +13,7 @@ namespace YummyProject.Controllers
         YummyContext context = new YummyContext();
         public ActionResult Index()
         {
+            
             return View();
         }
 
@@ -67,6 +68,14 @@ namespace YummyProject.Controllers
         {
             var values = context.ContactInfos.FirstOrDefault();
             return PartialView(values);
+        }
+        public PartialViewResult DefaultStats()
+        {
+            ViewBag.product = context.Products.Count();
+            ViewBag.category = context.Categories.Count();
+            ViewBag.events = context.Events.Count();
+            ViewBag.chefs = context.Chefs.Count();
+            return PartialView();
         }
 
     }
