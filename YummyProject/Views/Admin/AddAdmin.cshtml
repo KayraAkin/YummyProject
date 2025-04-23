@@ -1,0 +1,32 @@
+﻿@model YummyProject.Models.Admin
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Admin Ekleme Sayfası</h2>
+
+<form method="post">
+
+    <label>Resim Url</label>
+    @Html.TextAreaFor(x => x.ImageUrl, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.ImageUrl)</div>
+    <br />
+    <label>İsim Soyisim</label>
+    @Html.TextAreaFor(x => x.NameSurname, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.NameSurname)</div>
+    <br />
+    <label>Kullanıcı Adı</label>
+    @Html.TextAreaFor(x => x.UserName, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.UserName)</div>
+    <br />
+    <label>Şifre</label>
+    @Html.TextAreaFor(x => x.Password, 1, 4, new { @class = "form-control" })
+    <div class="text-danger">@Html.ValidationMessageFor(x => x.Password)</div>
+    <br />
+
+    <div class="text-danger">@ViewBag.error</div>
+    <button class="btn btn-primary">Kaydet</button>
+
+</form>
+

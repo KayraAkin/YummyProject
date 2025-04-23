@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Web;
@@ -47,6 +48,19 @@ namespace YummyProject.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult UpdateContactInfo(int id)
+        {
+            var value = _context.ContactInfos.Find(id);
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateContactInfo(ContactInfo contactInfo)
+        {
+            _context.Entry(contactInfo).State = EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
         //[HttpPost]
         //public ActionResult SendMessage(Message message)

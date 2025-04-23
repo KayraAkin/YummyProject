@@ -9,50 +9,53 @@ using YummyProject.Models;
 
 namespace YummyProject.Controllers
 {
-    public class ServiceController : Controller
+    public class AdminController : Controller
     {
         YummyContext _context = new YummyContext();
         public ActionResult Index()
         {
-            var values = _context.Services.ToList();
+            var values = _context.Admins.ToList();
             return View(values);
         }
-        public ActionResult AddService()
+        public ActionResult AddAdmin()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult AddService(Service service)
+        public ActionResult AddAdmin(Admin admin)
         {
             if (!ModelState.IsValid)
             {
-                return View(service);
+                return View(admin);
             }
-            _context.Services.Add(service);
-            var result = _context.SaveChanges();
+
+
+            _context.Admins.Add(admin);
+            int result = _context.SaveChanges();
+
             if (result == 0)
             {
                 ViewBag.error = "Değerler kaydedilirken bir hata ile karşılaşıldı";
-                return View(service);
+                return View(admin);
             }
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteService(int id)
+        public ActionResult DeleteAdmin(int id)
         {
-            var value = _context.Services.Find(id);
-            _context.Services.Remove(value);
+            var value = _context.Admins.Find(id);
+            _context.Admins.Remove(value);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult UpdateService(int id)
+        public ActionResult UpdateAdmin(int id)
         {
-            var value = _context.Services.Find(id);
+            var value = _context.Admins.Find(id);
             return View(value);
         }
         [HttpPost]
-        public ActionResult UpdateService(Service service)
+        public ActionResult UpdateAdmin(Admin admin)
         {
-            _context.Entry(service).State = EntityState.Modified;
+            _context.Entry(admin).State = EntityState.Modified;
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
