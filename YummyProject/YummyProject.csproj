@@ -134,6 +134,7 @@
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
+    <Compile Include="Controllers\ChefSocialController.cs" />
     <Compile Include="Controllers\ContactInfoController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -544,6 +545,10 @@
     <Content Include="Views\Admin\AddAdmin.cshtml" />
     <Content Include="Views\ContactInfo\UpdateContactInfo.cshtml" />
     <Content Include="Views\Default\DefaultStats.cshtml" />
+    <Content Include="Views\Chef\UpdateChefSocialMedia.cshtml" />
+    <Content Include="Views\ChefSocial\Index.cshtml" />
+    <Content Include="Views\ChefSocial\AddChefSocial.cshtml" />
+    <Content Include="Views\ChefSocial\UpdateChefSocial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

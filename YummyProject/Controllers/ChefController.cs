@@ -60,5 +60,17 @@ namespace YummyProject.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult UpdateChefSocailMedia(int id)
+        {
+            var value = _context.ChefSocials.Find(id);
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateChefSocailMedia(ChefSocial chefSocial)
+        {
+            _context.Entry(chefSocial).State = EntityState.Modified;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

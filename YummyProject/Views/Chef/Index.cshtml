@@ -15,6 +15,7 @@
         <th>Başlık</th>
         <th>Açıklama</th>
 
+        <th>Sosyal Medya</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
@@ -27,6 +28,7 @@
             <td>@item.Name</td>
             <td>@item.Title</td>
             <td>@item.Description</td>
+            <td><a href="/ChefSocial/Index/@item.ChefId" class="btn btn-warning">Düzenle</a></td>
             <td><a href="/Chef/DeleteChef/@item.ChefId" class="btn btn-danger">Sil</a></td>
             <td><a href="/Chef/UpdateChef/@item.ChefId" class="btn btn-info">Güncelle</a></td>
 
@@ -35,7 +37,7 @@
 
 </table>
 <br />
-<a href="/Chef/AddChef" class="btn-primary">Yeni Şef Ekle</a>
+<a href="/Chef/AddChef/@ViewBag.chef" class="btn-primary">Yeni Şef Ekle</a>
 
 @*<table class="table table-bordered table-hover">
 
