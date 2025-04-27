@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -52,6 +53,18 @@ namespace YummyProject.Controllers
         {
             var value = _context.Products.Find(id);
             _context.Products.Remove(value);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult UpdateProduct(int id)
+        {
+            var value = _context.Products.Find(id);
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateProduct(Product product)
+        {
+            _context.Entry(product).State = EntityState.Modified;
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

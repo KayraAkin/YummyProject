@@ -34,6 +34,10 @@ namespace YummyProject.Controllers
         }
         public ActionResult OpenMessage(int id)
         {
+            var isRead = _context.Messages.Find(id);
+            isRead.IsRead = true;
+            _context.SaveChanges();
+
             var value = _context.Messages.Find(id);
             return View(value);
             

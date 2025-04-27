@@ -217,6 +217,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Sigara Böreği.png" />
+    <Content Include="images\Dana Rosto.png" />
+    <Content Include="images\Yayla Çorbası.png" />
+    <Content Include="images\Mercimek Çorbası.png" />
+    <Content Include="images\Puding.png" />
     <Content Include="images\WhatsApp Görsel 2025-04-18 saat 15.08.06_70758ed8.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -549,6 +554,8 @@
     <Content Include="Views\ChefSocial\Index.cshtml" />
     <Content Include="Views\ChefSocial\AddChefSocial.cshtml" />
     <Content Include="Views\ChefSocial\UpdateChefSocial.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
