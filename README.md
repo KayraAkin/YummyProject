@@ -1,6 +1,6 @@
 
 
-#Yummy Restoran Projesi 
+# Yummy Restoran Projesi 
 Kullanıcı arayüzü, restoran hakkında detaylı bilgi verebilmek ve ürünler hakkında müşterilerin aklında soru işareti bırakmamak amacıyla tasarlanmıştır.
 Menüdeki her bir ürünün içeriğinden, mutfaktaki şeflere kadar ayrıntılı bilgiler sunulmuştur. Aklınızda bir soru işareti oluşursa, şeflerimize görsellerde belirtilen sosyal medya hesaplarından kolayca ulaşabilir veya yine arayüzdeki mesaj kısmı üzerinden iletişim kurabilirsiniz.
 Arayüzde yer alan galeri bölümü, restoranın ambiyansını yansıtmaktadır. Müşteri ihtiyaçlarına yönelik etkinliklere de arayüzde yer verilmiştir.
