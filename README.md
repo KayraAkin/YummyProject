@@ -58,7 +58,7 @@ Projede ayrıca bir yönetici (admin) arayüzü de hazırlanmış olup, kullanı
 ![1](https://github.com/user-attachments/assets/7b20be9a-8b5e-4a83-a7de-9d80769b1bd2)
 ![2](https://github.com/user-attachments/assets/fba6867a-3897-4351-8485-7dc1fee2c72c)
 ![3](https://github.com/user-attachments/assets/73c7fed2-1466-43d4-ac4c-c51891e6ce4f)
-![4](https://github.com/user-attachments/assets/b2ceeb07-6893-47e4-9ba4-92e5796d44b5)
+![4](https://github.com/user-attachments/assets/5b19a449-cfa0-4ce5-b868-f14ee5a364f3)
 ![5](https://github.com/user-attachments/assets/468c8d1b-198e-44f3-a2f2-e097a8e85c54)
 ![6](https://github.com/user-attachments/assets/41484251-b1db-4d9f-80ce-ba99a6cb3765)
 ![7](https://github.com/user-attachments/assets/bc6fe180-4a34-4b60-b7da-e6c1b13a1c0e)
