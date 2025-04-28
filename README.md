@@ -8,46 +8,48 @@ Rezervasyon işlemleri kullanıcı arayüzü üzerinden rahatlıkla yapılabilme
 Projede ayrıca bir yönetici (admin) arayüzü de hazırlanmış olup, kullanıcı arayüzündeki tüm değişikliklerin dinamik olarak kontrol edilmesi mümkündür.
 
 ## 🌟Kullanıcı Arayüzü Özellikleri
-Hakkımızda alanından restoran hakkında bilgi alınabilir.
+-Hakkımızda alanından restoran hakkında bilgi alınabilir.
 
-Menü kısmından restorandaki ürünler ve içerikleri hakkında bilgi edinilebilir.
+-Menü kısmından restorandaki ürünler ve içerikleri hakkında bilgi edinilebilir.
 
-Etkinlikler kısmından, restoranda düzenlenen etkinlikler hakkında bilgi sahibi olunabilir.
+-Etkinlikler kısmından, restoranda düzenlenen etkinlikler hakkında bilgi sahibi olunabilir.
 
-Şefler hakkında detaylı bilgi alınabilir.
+-Şefler hakkında detaylı bilgi alınabilir.
 
-Restorana ilk kez gelmek isteyen müşteriler için, restoran fotoğraflarıyla bilgilendirme yapılabilir.
+-Restorana ilk kez gelmek isteyen müşteriler için, restoran fotoğraflarıyla bilgilendirme yapılabilir.
 
-Restoranla ilgili iletişim bilgilerine ulaşılabilir.
+-Restoranla ilgili iletişim bilgilerine ulaşılabilir.
 
-Online rezervasyon işlemleri gerçekleştirilebilir.
+-Online rezervasyon işlemleri gerçekleştirilebilir.
 
-Mesaj yoluyla doğrudan iletişime geçilebilir.
+-Mesaj yoluyla doğrudan iletişime geçilebilir.
 
-Yönetici (admin) girişi kullanıcı arayüzü üzerinden yapılabilir.
+-Yönetici (admin) girişi kullanıcı arayüzü üzerinden yapılabilir.
 
 ## 🌟Yönetici (Admin) Arayüzü Özellikleri
-Kontrol paneli üzerinden restoranla ilgili istatistiklere ulaşılabilir.
+-Kontrol paneli üzerinden restoranla ilgili istatistiklere ulaşılabilir.
 
-Öne Çıkan Alan, Hakkımızda, Servisler ve Ürünler gibi birçok bölüm dinamik olarak eklenip, silinip veya güncellenebilir.
+-Öne Çıkan Alan, Hakkımızda, Servisler ve Ürünler gibi birçok bölüm dinamik olarak eklenip, silinip veya güncellenebilir.
 
-Şefler ve şeflerin sosyal medya hesapları aynı şekilde dinamik olarak düzenlenebilir.
+-Şefler ve şeflerin sosyal medya hesapları aynı şekilde dinamik olarak düzenlenebilir.
 
-Gelen rezervasyon talepleri, "onaylanmamış" olarak rezervasyon bölümüne düşer ve istek halinde onaylanabilir.
+-Gelen rezervasyon talepleri, "onaylanmamış" olarak rezervasyon bölümüne düşer ve istek halinde onaylanabilir.
 
-Kullanıcıdan gelen mesajlar, Mesajlar bölümüne "okunmamış" olarak gelir; mesaj açıldığında veya admin tarafından "okundu" olarak işaretlendiğinde mesaj durumu güncellenir.
+-Kullanıcıdan gelen mesajlar, Mesajlar bölümüne "okunmamış" olarak gelir; mesaj açıldığında veya admin tarafından "okundu" olarak işaretlendiğinde mesaj durumu güncellenir.
 
 ## 🌟Kullanılan Teknolojiler
-CRUD İşlemleri
+-CRUD İşlemleri
 
-ASP.NET MVC5
+-ASP.NET MVC5
 
-Code First Yaklaşımı
+-Code First Yaklaşımı
 
-SQL Server
+-SQL Server
 
-Entity Framework ve LINQ Sorguları
+-Entity Framework ve LINQ Sorguları
 
-Validasyon Kontrolleri
+-Validasyon Kontrolleri
 
-Authorization (Yetkilendirme) İşlemleri
+-Authorization (Yetkilendirme) İşlemleri
+
+-HTML, CSS, Bootstrap
